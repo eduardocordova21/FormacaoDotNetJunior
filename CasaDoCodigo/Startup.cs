@@ -41,10 +41,10 @@ namespace CasaDoCodigo
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Pedido}/{action=Carrossel}/{codigo?}");
+                    template: "{controller=Pedido}/{action=BuscaDeProdutos}/{codigo?}");
             });
 
-            serviceProvider.GetService<IDataService>().InicializaDB().Wait();
+            //serviceProvider.GetService<IDataService>().InicializaDB().Wait();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.

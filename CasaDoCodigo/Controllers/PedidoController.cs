@@ -20,6 +20,11 @@ namespace CasaDoCodigo.Controllers
             this.itemPedidoRepository = itemPedidoRepository;
         }
 
+        public IActionResult BuscaDeProdutos()
+        {
+            return View(produtoRepository.GetProdutos());
+        }
+
         public async Task<IActionResult> Cadastro()
         {
             var pedido = await pedidoRepository.GetPedido();
