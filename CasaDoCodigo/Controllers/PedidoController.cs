@@ -22,7 +22,7 @@ namespace CasaDoCodigo.Controllers
 
         public IActionResult BuscaDeProdutos()
         {
-            return View(produtoRepository.GetProdutos());
+            return View(new BuscaViewModel(produtoRepository.GetProdutos()));
         }
 
         public async Task<IActionResult> Cadastro()
